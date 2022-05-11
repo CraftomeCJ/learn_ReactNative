@@ -1,50 +1,27 @@
-import { StyleSheet,
+import {
   Text,
-  View,
-  Button,
-  ScrollView
-} from 'react-native'
-import React from 'react'
+  StyleSheet,
+  View
+} from 'react-native';
+import React from 'react';
 
-const HomeScreen: React.FC = (navigation) => {
+const HomeScreen: React.FC = () => {
 
   return (
-    <ScrollView>
-        <View>
-
-          <Text style={styles.styleHeader}>
-
-            Good day!! This is Udemy's React Native Course Home Screen
-          </Text>
-
-          <Button
-          title="Go to Component Demo"
-          onPress={() => navigation.navigate('Components')}
-          />
-              </View>
-</ScrollView>
+    <View>
+      <Text style={styles.text}>
+      This is my HomeScreen and I will build a Carousel SplashScreen here!!
+      </Text>
+    </View>
   )
-}
-
-export default HomeScreen
+};
 
 const styles = StyleSheet.create({
-  styleHeader: {
-    marginVertical: 20,
-    fontSize: 40,
-    color: 'yellow',
-    backgroundColor: 'lightblue',
+  text: {
+    fontSize: 50,
+    fontWeight: 'bold',
+    color: 'red'
   },
-  styleTouch: {
-    marginVertical: 15,
-    fontSize: 16,
-    color: 'blue',
-    backgroundColor: 'lightyellow',
-  },
-  styleMain: {
-    marginVertical: 10,
-    fontSize: 16,
-    color: 'orange',
-    backgroundColor: 'lightpink'
-  }
-})
+});
+
+export default HomeScreen;
